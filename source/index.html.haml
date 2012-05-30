@@ -1,0 +1,16 @@
+- content_for :head do
+    %title PNG in canvas
+    = stylesheet_link_tag "canvas"
+
+
+#canvas
+
+%p
+    A clone of http://koalastothemax.com/, but in pure JS with no helper graphic libraries, and drawing using the DOME elements.
+
+
+=javascript_include_tag "http://code.jquery.com/jquery-1.7.2.min.js"
+=javascript_include_tag "https://raw.github.com/devongovett/png.js/master/zlib.js"
+=javascript_include_tag "https://raw.github.com/devongovett/png.js/master/png.js"
+=javascript_include_tag "canvas"
+
