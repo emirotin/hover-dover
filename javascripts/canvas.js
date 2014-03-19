@@ -1,10 +1,10 @@
 (function() {
   var image_url;
 
-  image_url = "images/spaceman.png";
+  image_url = "/images/spaceman.png";
 
   PNG.load(image_url, null, function(png) {
-    var $canvas, b, bl, br, cnt, draw_sq, g, h, i, j, k, m, matrix, pixels, r, row, tl, to_hex, tr, w, _pixels, _ref, _ref2, _ref3, _ref4;
+    var $canvas, b, bl, br, cnt, draw_sq, g, h, i, j, k, m, matrix, pixels, r, row, tl, to_hex, tr, w, _i, _j, _k, _l, _pixels, _ref, _ref1, _ref2, _ref3;
     $canvas = $('#canvas');
     $canvas.width(png.width).height(png.height).show();
     cnt = png.width * png.height;
@@ -15,9 +15,9 @@
     }, _pixels);
     matrix = new Array(png.height);
     k = -1;
-    for (i = 0, _ref = png.height; 0 <= _ref ? i < _ref : i > _ref; 0 <= _ref ? i++ : i--) {
+    for (i = _i = 0, _ref = png.height; 0 <= _ref ? _i < _ref : _i > _ref; i = 0 <= _ref ? ++_i : --_i) {
       matrix[i] = row = new Array(png.width);
-      for (j = 0, _ref2 = png.width; 0 <= _ref2 ? j < _ref2 : j > _ref2; 0 <= _ref2 ? j++ : j--) {
+      for (j = _j = 0, _ref1 = png.width; 0 <= _ref1 ? _j < _ref1 : _j > _ref1; j = 0 <= _ref1 ? ++_j : --_j) {
         k += 1;
         r = pixels[4 * k] || 0;
         g = pixels[4 * k + 1] || 0;
@@ -38,9 +38,9 @@
     w = 2;
     while (w <= png.width) {
       m = new Array(png.height / h);
-      for (i = 0, _ref3 = png.height / h; 0 <= _ref3 ? i < _ref3 : i > _ref3; 0 <= _ref3 ? i++ : i--) {
+      for (i = _k = 0, _ref2 = png.height / h; 0 <= _ref2 ? _k < _ref2 : _k > _ref2; i = 0 <= _ref2 ? ++_k : --_k) {
         m[i] = row = new Array(png.width / w);
-        for (j = 0, _ref4 = png.width / w; 0 <= _ref4 ? j < _ref4 : j > _ref4; 0 <= _ref4 ? j++ : j--) {
+        for (j = _l = 0, _ref3 = png.width / w; 0 <= _ref3 ? _l < _ref3 : _l > _ref3; j = 0 <= _ref3 ? ++_l : --_l) {
           tl = matrix[2 * i][2 * j];
           tr = matrix[2 * i][2 * j + 1];
           bl = matrix[2 * i + 1][2 * j];
@@ -71,12 +71,16 @@
     }
     to_hex = function(d) {
       r = d.toString(16);
-      if (r.length < 2) r = '0' + r;
+      if (r.length < 2) {
+        r = '0' + r;
+      }
       return r;
     };
     draw_sq = function(sq) {
       var $p, bg;
-      if (!sq) return;
+      if (!sq) {
+        return;
+      }
       $p = $('<p>');
       bg = "#" + (to_hex(sq.r)) + (to_hex(sq.g)) + (to_hex(sq.b));
       $p.css({
