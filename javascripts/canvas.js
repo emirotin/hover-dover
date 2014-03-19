@@ -1,7 +1,7 @@
 (function() {
   var image_url;
 
-  image_url = "" + location.pathname + "images/spaceman.png";
+  image_url = "images/spaceman.png";
 
   PNG.load(image_url, null, function(png) {
     var $canvas, b, bl, br, cnt, draw_sq, g, h, i, j, k, m, matrix, pixels, r, row, tl, to_hex, tr, w, _i, _j, _k, _l, _pixels, _ref, _ref1, _ref2, _ref3;
