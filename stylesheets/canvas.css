@@ -56,16 +56,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 4, /Users/admin/Work/hover-dover/source/stylesheets/canvas.css.sass */
 body {
-  padding: 50px; }
+  padding: 50px;
+  font: 14px Tahoma;
+  color: #333333; }
 
-/* line 7, /Users/admin/Work/hover-dover/source/stylesheets/canvas.css.sass */
+/* line 9, /Users/admin/Work/hover-dover/source/stylesheets/canvas.css.sass */
+p {
+  margin: 10px 0; }
+
+/* line 12, /Users/admin/Work/hover-dover/source/stylesheets/canvas.css.sass */
 #canvas {
   display: none;
   position: relative;
   -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2); }
-  /* line 11, /Users/admin/Work/hover-dover/source/stylesheets/canvas.css.sass */
+  /* line 16, /Users/admin/Work/hover-dover/source/stylesheets/canvas.css.sass */
   #canvas p {
     display: block;
     position: absolute;
