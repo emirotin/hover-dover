@@ -1,4 +1,4 @@
-image_url = "#{location.pathname}images/spaceman.png"
+image_url = "images/spaceman.png"
 PNG.load image_url, null, (png) ->
     $canvas = $ '#canvas'
     $canvas.width(png.width).height(png.height)
