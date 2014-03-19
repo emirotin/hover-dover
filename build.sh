@@ -7,3 +7,4 @@ cp -R build/* .
 git add .
 git commit -am "build"
 git push
+git checkout master
