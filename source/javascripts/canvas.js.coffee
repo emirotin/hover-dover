@@ -1,8 +1,8 @@
 image_url = "images/spaceman.png"
 PNG.load image_url, null, (png) ->
     $canvas = $ '#canvas'
+    $canvas.html('')
     $canvas.width(png.width).height(png.height)
-    $('.canvas-wrap').css 'visibility', 'visible'
     cnt = png.width * png.height
     _pixels = png.decodePixels()
     pixels = Array(cnt * 4)
