@@ -4,10 +4,10 @@
   image_url = "images/spaceman.png";
 
   PNG.load(image_url, null, function(png) {
-    var $canvas, b, bl, br, cnt, draw_sq, g, h, i, j, k, m, matrix, pixels, r, row, tl, to_hex, tr, w, _i, _j, _k, _l, _pixels, _ref, _ref1, _ref2, _ref3;
+    var $canvas, _pixels, b, bl, br, cnt, draw_sq, g, h, i, j, k, l, m, matrix, n, o, p, pixels, r, ref, ref1, ref2, ref3, row, tl, to_hex, tr, w;
     $canvas = $('#canvas');
+    $canvas.html('');
     $canvas.width(png.width).height(png.height);
-    $('.canvas-wrap').css('visibility', 'visible');
     cnt = png.width * png.height;
     _pixels = png.decodePixels();
     pixels = Array(cnt * 4);
@@ -16,9 +16,9 @@
     }, _pixels);
     matrix = new Array(png.height);
     k = -1;
-    for (i = _i = 0, _ref = png.height; 0 <= _ref ? _i < _ref : _i > _ref; i = 0 <= _ref ? ++_i : --_i) {
+    for (i = l = 0, ref = png.height; 0 <= ref ? l < ref : l > ref; i = 0 <= ref ? ++l : --l) {
       matrix[i] = row = new Array(png.width);
-      for (j = _j = 0, _ref1 = png.width; 0 <= _ref1 ? _j < _ref1 : _j > _ref1; j = 0 <= _ref1 ? ++_j : --_j) {
+      for (j = n = 0, ref1 = png.width; 0 <= ref1 ? n < ref1 : n > ref1; j = 0 <= ref1 ? ++n : --n) {
         k += 1;
         r = pixels[4 * k] || 0;
         g = pixels[4 * k + 1] || 0;
@@ -39,9 +39,9 @@
     w = 2;
     while (w <= png.width) {
       m = new Array(png.height / h);
-      for (i = _k = 0, _ref2 = png.height / h; 0 <= _ref2 ? _k < _ref2 : _k > _ref2; i = 0 <= _ref2 ? ++_k : --_k) {
+      for (i = o = 0, ref2 = png.height / h; 0 <= ref2 ? o < ref2 : o > ref2; i = 0 <= ref2 ? ++o : --o) {
         m[i] = row = new Array(png.width / w);
-        for (j = _l = 0, _ref3 = png.width / w; 0 <= _ref3 ? _l < _ref3 : _l > _ref3; j = 0 <= _ref3 ? ++_l : --_l) {
+        for (j = p = 0, ref3 = png.width / w; 0 <= ref3 ? p < ref3 : p > ref3; j = 0 <= ref3 ? ++p : --p) {
           tl = matrix[2 * i][2 * j];
           tr = matrix[2 * i][2 * j + 1];
           bl = matrix[2 * i + 1][2 * j];
