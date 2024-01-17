@@ -1,7 +1,9 @@
 #!/bin/sh
 
+set -e
+
 git checkout master
-middleman build
+pnpm build
 git checkout gh-pages
 cp -R build/* .
 git add .

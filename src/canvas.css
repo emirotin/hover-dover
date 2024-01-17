@@ -1,0 +1,31 @@
+@import "modern-normalize/modern-normalize.css";
+
+body {
+	padding: 50px;
+	font: 16px sans-serif;
+}
+
+.p {
+	margin: 10px 0;
+	color: #333;
+}
+
+.canvas-wrap {
+	display: inline-block;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+	padding: 12px;
+	margin-top: 12px;
+	border-radius: 3px;
+}
+
+#canvas {
+	position: relative;
+}
+
+#canvas p {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	border-radius: 50%;
+}

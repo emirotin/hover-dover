@@ -1,0 +1,31 @@
+---
+import "../canvas.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>PNG in canvas</title>
+  </head>
+  <body>
+    <main role="main">
+      <p class="p">
+        A clone of
+        <a href="http://koalastothemax.com/" target="_blank" rel="noopener"
+          >http://koalastothemax.com/</a
+        >, but in pure JS with no helper graphic libraries, and drawing using
+        the DOM elements.
+      </p>
+
+      <div class="canvas-wrap">
+        <div id="canvas">Loading, please wait...</div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js" is:raw></script>
+    <script src="../canvas.js"></script>
+  </body>
+</html>
