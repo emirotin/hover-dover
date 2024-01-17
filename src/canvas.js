@@ -1,5 +1,6 @@
 import "png-js/zlib.js";
 import "png-js/png.js";
+import $ from "jquery";
 
 function render(png) {
 	const $canvas = $("#canvas");
