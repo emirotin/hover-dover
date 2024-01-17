@@ -97,6 +97,6 @@ function render(png) {
 	drawSquare(matrix[0][0]);
 }
 
-const imageUrl = "images/spaceman.png";
+const imageUrl = import.meta.env.BASE_URL + "/images/spaceman.png";
 
 PNG.load(imageUrl, null, render);

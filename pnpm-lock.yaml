@@ -14,14 +14,12 @@ dependencies:
   modern-normalize:
     specifier: ^2.0.0
     version: 2.0.0
-  typescript:
-    specifier: ^5.3.3
-    version: 5.3.3
-
-devDependencies:
   png-js:
     specifier: ^1.0.0
     version: 1.0.0
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
 
 packages:
 
@@ -2704,7 +2702,7 @@ packages:
 
   /png-js@1.0.0:
     resolution: {integrity: sha512-k+YsbhpA9e+EFfKjTCH3VW6aoKlyNYI6NYdTfDL4CIvFnvsuO84ttonmZE7rc+v23SLTH8XX+5w/Ak9v0xGY4g==}
-    dev: true
+    dev: false
 
   /postcss@8.4.33:
     resolution: {integrity: sha512-Kkpbhhdjw2qQs2O2DGX+8m5OVqEcbB9HRBvuYM9pgrjEFUg30A9LmXNlTAUj4S9kgtGyrMbTzVjH7E+s5Re2yg==}
